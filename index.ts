@@ -1,24 +1,32 @@
-let 회원들 :(number | string)[] = [1,'2',3]
-let 오브젝트 :{ a : (string | number) } = { a : '123'}
 
-let 나이 :unknown = 1;
-
-let user :string = 'kim';
-let age :number | undefined = undefined;
-let married :boolean = false; 
-let 철수 :(string|number|undefined|boolean)[] = [user, age, married];
-
-let 학교 : {
-    score : (number|boolean)[],
-    teacher :string,
-    friend :string | string[],
+function sayHello(x :string) {
+    if (x) {
+        console.log('안녕하세요' + x)
+    } else {
+        console.log('input name')
+    }
 }
 
-={
-    score : [100, 97, 84],
-    teacher : 'Phil',
-    friend : 'John'
+function checkNum(x :number|string) :number{
+    return x.toString().length
 }
 
-학교.score[4] = false;
-학교.friend = ['Lee' , 학교.teacher]
+ console.log(checkNum(123))
+
+ function possibleToM(x :number, y :boolean, z:string ) {
+    let sum :number = 0;
+    sum += x;
+    if (y === true) {
+        sum +=500
+    }
+    if (z === 'T') {
+        sum += 100
+    }
+    if (sum >= 600) {
+        return 'possible'
+    }
+
+ }
+
+console.log(possibleToM(700, false, 'E'))
+console.log(possibleToM(100, false, 'T'))
