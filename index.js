@@ -1,2 +1,6 @@
-var 제목 = document.querySelector('#title');
-제목.innerHTML = '반가워요';
+var User = /** @class */ (function () {
+    function User(name) {
+        this.name = name;
+    }
+    return User;
+}());
