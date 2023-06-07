@@ -1,17 +1,8 @@
-var 동물 = { name: 'kim', age: 20 };
-var 여친 = {
-    name: '엠버'
-};
-여친.name = '유라';
-var position = { x: 10, y: 20 };
-var test = {
-    size: 123,
-    position: [1, 2, 3]
-};
-var testinfo = { name: 'kim', phone: 123, email: 'abc@naver.com' };
-var testage = {
-    name: 'kim',
-    phone: 123,
-    email: 'abc@naver.com',
-    adult: false
-};
+var 접니다;
+var 변수 = 'kim';
+var 자료 = {
+    name: 'kim'
+}; // 1. object value 값을 그대로 type 지정해줌 2. object 속성들에 모두 readonly 붙여줌 * object자료를 완전히 잠궈준다
+function 내함수(a) {
+}
+내함수(자료.name);

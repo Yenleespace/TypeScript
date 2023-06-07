@@ -1,52 +1,13 @@
-type Animal = { name: string, age :number }
-let 동물 :Animal = { name: 'kim', age: 20 }
+let 접니다 :'대머리' | '솔로';
 
-type Girlfriend = {
-    name :string | undefined
+const 변수  = 'kim';
+
+var 자료 = {
+    name : 'kim'
+} as const // 1. object value 값을 그대로 type 지정해줌 2. object 속성들에 모두 readonly 붙여줌 * object자료를 완전히 잠궈준다
+
+function 내함수(a : 'kim') {
+
 }
 
-const 여친 :Girlfriend = {
-    name : '엠버'
-}
-여친.name = '유라'
-
-type Name = string;
-type Age = number;
-type Person = Name | Age;
-
-type PositionX = { x : number };
-type PositionY = { y : number };
-
-type NewType = PositionX & PositionY;
-
-let position :NewType = { x : 10, y : 20 }
-
-type Produrct = { 
-    color? : string, 
-    size : number, 
-    readonly position :number[] 
-}
-
-let test :Produrct = {
-    size : 123,
-    position : [1,2,3]
-}
-
-type PersonInfo = {
-    name : string,
-    phone : number,
-    email : string,
-}
-
-let testinfo :PersonInfo = { name : 'kim', phone : 123, email : 'abc@naver.com' }
-
-type UnderAge = { adult : boolean }
-
-type NewUser = PersonInfo & UnderAge
-
-let testage :NewUser = { 
-    name : 'kim', 
-    phone : 123, 
-    email : 'abc@naver.com', 
-    adult : false 
-}
+내함수(자료.name)
