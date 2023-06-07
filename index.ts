@@ -1,52 +1,49 @@
-type Animal = { name : string }
-type Cat = { age : number } & Animal
+let { student, age } = { student : true, age : 20 }
+let 오브젝트 = { student : true, age : 20 }
 
-interface Square  {
-    color : string, 
-    width : number 
+function 함수({ student, age } : { student : boolean, age : number }){
+    console.log(student, age)
 }
 
-let 네모 :Square = { color : 'red', width : 100 }
+함수({ student : true, age : 20 })
 
-interface Student {
-    name : string
-}
-interface Teacher extends Student{
-    age : number
-}
+function Max(...a :number[]) {
+    let res = 0;
+    a.forEach((i) => {
+        if (res < i) {
+            res = i
+        } 
+    })
 
-let 학생 :Student = { name : 'kim' }
-let 선생 :Teacher= { name : 'kim', age : 20 }
-
-//////////////////
-interface Product {
-    brand : string,
-    serialNumber : number,
-    model : string[]
-}
-let 상품 :Product = { brand : 'Samsung', serialNumber : 1360, model : ['TV', 'phone'] }
-
-interface Cart {
-    product : string,
-    price : number
-}
-let 장바구니 : Cart[] = [ { product : '청소기', price : 7000 }, { product : '삼다수', price : 800 } ] 
-
-interface Card extends Cart {
-    card : boolean
-}
-let update :Card = { product : '청소기', price : 7000, card : false }
-
-interface Mathobj {
-    plus : (a:number, b:number) => number,
-    minus : (a:number, b:number) => number
+    return res
 }
 
-let 오브젝트 :Mathobj = {
-    plus(a, b) {
-        return a + b
-    },
-    minus(a, b) {
-        return a - b
-    }
+console.log(Max(4,6,3,2)) 
+
+type UserType = {
+    user :string, 
+    comment :number[], 
+    admin :boolean
+}
+
+function 함수2({user, comment, admin} :UserType) :void{
+    console.log(user, comment, admin)
+}
+
+함수2( { user : 'kim', comment : [3,5,4], admin : false } )
+
+
+
+// function 함수3(arr :any[]) {
+//     arr.forEach((i) => {
+//         console.log(i)
+//     })
+// }
+
+함수3( [40, 'wine', false] )
+
+type ArrType = (number | string |  boolean)[];
+
+function 함수3([a,b,c] :ArrType) {
+    console.log(a,b,c)
 }
