@@ -1,32 +1,52 @@
+type Animal = { name: string, age :number }
+let 동물 :Animal = { name: 'kim', age: 20 }
 
-function sayHello(x :string) {
-    if (x) {
-        console.log('안녕하세요' + x)
-    } else {
-        console.log('input name')
-    }
+type Girlfriend = {
+    name :string | undefined
 }
 
-function checkNum(x :number|string) :number{
-    return x.toString().length
+const 여친 :Girlfriend = {
+    name : '엠버'
+}
+여친.name = '유라'
+
+type Name = string;
+type Age = number;
+type Person = Name | Age;
+
+type PositionX = { x : number };
+type PositionY = { y : number };
+
+type NewType = PositionX & PositionY;
+
+let position :NewType = { x : 10, y : 20 }
+
+type Produrct = { 
+    color? : string, 
+    size : number, 
+    readonly position :number[] 
 }
 
- console.log(checkNum(123))
+let test :Produrct = {
+    size : 123,
+    position : [1,2,3]
+}
 
- function possibleToM(x :number, y :boolean, z:string ) {
-    let sum :number = 0;
-    sum += x;
-    if (y === true) {
-        sum +=500
-    }
-    if (z === 'T') {
-        sum += 100
-    }
-    if (sum >= 600) {
-        return 'possible'
-    }
+type PersonInfo = {
+    name : string,
+    phone : number,
+    email : string,
+}
 
- }
+let testinfo :PersonInfo = { name : 'kim', phone : 123, email : 'abc@naver.com' }
 
-console.log(possibleToM(700, false, 'E'))
-console.log(possibleToM(100, false, 'T'))
+type UnderAge = { adult : boolean }
+
+type NewUser = PersonInfo & UnderAge
+
+let testage :NewUser = { 
+    name : 'kim', 
+    phone : 123, 
+    email : 'abc@naver.com', 
+    adult : false 
+}

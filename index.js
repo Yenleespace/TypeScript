@@ -1,27 +1,17 @@
-function sayHello(x) {
-    if (x) {
-        console.log('안녕하세요' + x);
-    }
-    else {
-        console.log('input name');
-    }
-}
-function checkNum(x) {
-    return x.toString().length;
-}
-console.log(checkNum(123));
-function possibleToM(x, y, z) {
-    var sum = 0;
-    sum += x;
-    if (y === true) {
-        sum += 500;
-    }
-    if (z === 'T') {
-        sum += 100;
-    }
-    if (sum >= 600) {
-        return 'possible';
-    }
-}
-console.log(possibleToM(700, false, 'E'));
-console.log(possibleToM(100, false, 'T'));
+var 동물 = { name: 'kim', age: 20 };
+var 여친 = {
+    name: '엠버'
+};
+여친.name = '유라';
+var position = { x: 10, y: 20 };
+var test = {
+    size: 123,
+    position: [1, 2, 3]
+};
+var testinfo = { name: 'kim', phone: 123, email: 'abc@naver.com' };
+var testage = {
+    name: 'kim',
+    phone: 123,
+    email: 'abc@naver.com',
+    adult: false
+};
