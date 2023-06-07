@@ -1,37 +1,14 @@
-var Car = /** @class */ (function () {
-    function Car(a, b) {
-        this.model = a;
-        this.price = b;
+var 네모 = { color: 'red', width: 100 };
+var 학생 = { name: 'kim' };
+var 선생 = { name: 'kim', age: 20 };
+var 상품 = { brand: 'Samsung', serialNumber: 1360, model: ['TV', 'phone'] };
+var 장바구니 = [{ product: '청소기', price: 7000 }, { product: '삼다수', price: 800 }];
+var update = { product: '청소기', price: 7000, card: false };
+var 오브젝트 = {
+    plus: function (a, b) {
+        return a + b;
+    },
+    minus: function (a, b) {
+        return a - b;
     }
-    Car.prototype.tax = function () {
-        return this.price / 10;
-    };
-    return Car;
-}());
-var car1 = new Car('소나타', 3000);
-console.log(car1); // { model : '소나타', price : 3000 }
-console.log(car1.tax()); // 300
-var Word = /** @class */ (function () {
-    function Word() {
-        var param = [];
-        for (var _i = 0; _i < arguments.length; _i++) {
-            param[_i] = arguments[_i];
-        }
-        var 숫자 = [];
-        var 문자 = [];
-        param.forEach(function (i) {
-            if (typeof i === 'string') {
-                문자.push(i);
-            }
-            else {
-                숫자.push(i);
-            }
-        });
-        this.num = 숫자;
-        this.str = 문자;
-    }
-    return Word;
-}());
-var obj = new Word('kim', 3, 5, 'park');
-console.log(obj.num);
-console.log(obj.str);
+};
